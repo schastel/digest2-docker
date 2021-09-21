@@ -27,12 +27,12 @@ docker run --rm -v /home/schastel/digest2-parameters:/parameters -v /home/schast
 
 and assuming the contents of my_object.obs are those of sample.obs, you should eventually see something like:
 
-<code>
+```
 Desig.    RMS Int NEO N22 N18 Other Possibilities
 NE00030  0.15 100 100  33   0
 NE00199  0.56  99  99  16   0 (MC 1) (JFC 1)
 NE00269  0.42  27  27   4   0 (MC 7) (Pho 17) (MB1 <1) (Han <1) (MB2 29) (MB3 4) (JFC 1)
-</code>
+```
 
 
 * The first time you run the previous command, the contents of the digest2-parameters directory will be initialized, that is, the digest2 model, the default MPC.config, and the obscodes will be downloaded from where they should. That means that you need to delete the contents of that directory when any of those are changed, especially the model. 
