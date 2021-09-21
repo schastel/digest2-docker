@@ -1,0 +1,12 @@
+#
+# MPC digest2
+#
+FROM schastel/digest2-phase1:latest
+MAINTAINER schastel
+
+RUN mkdir -p /INSTALL
+WORKDIR "/INSTALL"
+COPY ./phase2-install-script.sh ./
+RUN chmod +x ./phase2-install-script.sh && ./phase2-install-script.sh
+
+ENTRYPOINT [ "/bin/bash", "/usr/local/bin/digest2.sh" ]

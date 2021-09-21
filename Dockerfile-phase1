@@ -1,0 +1,10 @@
+#
+# MPC digest2
+#
+FROM ubuntu:20.04
+MAINTAINER schastel
+
+RUN mkdir -p /INSTALL
+WORKDIR "/INSTALL"
+COPY ./phase1-build.sh ./
+RUN chmod +x ./phase1-build.sh && ./phase1-build.sh
